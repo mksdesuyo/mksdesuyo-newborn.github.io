@@ -114,11 +114,11 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.7rem 1rem;
+  padding: 3.5rem 1rem;
 }
 .hero-text {
   display: flex;
@@ -132,7 +132,11 @@ body {
 .hero-text__intro {
   letter-spacing: 1px;
 }
-#heroAction {
+.hero-text__anchor {
+  border-radius: 32px;
+}
+.hero-text__button {
+  cursor: pointer;
   width: 220px;
   height: 50px;
   background-color: var(--accent-color);
@@ -142,9 +146,100 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 32px;
+  transition: 0.3s;
+}
+.hero-text__button:hover {
+  background-color: hsl(178, 65%, 30%);
 }
 .hero-image > img {
   width: 320px;
-  border: solid 1px var(--secondary-color);
   border-radius: 100%;
+  transition: 600ms ease-in-out;
+}
+.hero-image > img:hover {
+  border-radius: 10%;
+}
+
+/* About Section */
+#about {
+  background-color: var(--accent-color);
+}
+.about-container {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3.5rem 1rem 1rem 1rem;
+}
+.about__heading {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.about-content {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.about-content__line {
+  width: 150px;
+  border: solid 2px var(--secondary-color);
+  border-radius: 16px;
+  position: relative;
+  top: 9px;
+}
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 5rem;
+}
+.tech-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tech-header__heading {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.tech-header__line {
+  border: solid 2px var(--secondary-color);
+  border-radius: 16px;
+}
+.tech-grid__list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem 1rem;
+}
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background-color: var(--primary-color);
+}
+.tech-card > p {
+  font-weight: 500;
+}
+
+/* Projects Section */
+.projects-container {
+  max-width: 1140px;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  padding: 1.17rem 1rem;
 }
